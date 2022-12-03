@@ -15,7 +15,6 @@ function makeGrid(event) {
   const newCol = document.querySelector("#inputWidth").valueAsNumber;
   //selecting color from color selector
   const tdColor = document.querySelector("#colorPicker").value;
-  console.log(tdColor);
   //checking range for grid size, prompting appropriate message and preventing creation of grid
   if (newRow > 50 || newCol > 50) {
     alert(
@@ -38,7 +37,6 @@ function makeGrid(event) {
   document.body.appendChild(table);
   // handler for selected grid
   function tdClickHandler(event) {
-    console.log("clicked");
     let target = event.target;
     target.style.background = tdColor;
   }
